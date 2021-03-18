@@ -6,10 +6,10 @@
 <br>
 <br>
 <div class="border-solid border-2 border-black pt-6 rounded-lg md:mx-20 shadow-xl">
-  <img class="space-y-4 w-32 h-32 rounded-full mx-auto" src="https://avatars.githubusercontent.com/u/52849281?s=460&u=64106e70e8adc00414d015772d24e4d0efe200ef&v=4" alt="" width="512" height="512">
+  <img class="space-y-4 w-32 h-32 rounded-full mx-auto transform hover:scale-150 duration-1000 motion-reduce:transform-none" src="https://avatars.githubusercontent.com/u/52849281?s=460&u=64106e70e8adc00414d015772d24e4d0efe200ef&v=4" alt="" width="512" height="512">
   <div class="pt-3 text-center space-y-4">
     <figcaption class="font-bold text-3xl flex justify-center">
-      <div class="text-white bg-gradient-to-r from-green-400 to-blue-500 px-5 py-3 text-center font-extrabold rounded-full w-40 cursor-wait" onclick="Swal.fire({ icon: 'warning', title: '우아!', text: '제 이름을 클릭해 주시다니!'});">
+      <div class="text-white bg-gradient-to-r from-green-400 to-blue-500 px-5 py-3 text-center font-extrabold rounded-full w-40 cursor-wait transform hover:scale-150 duration-1000 motion-reduce:transform-none" onclick="Swal.fire({ icon: 'warning', title: '우아!', text: '제 이름을 클릭해 주시다니!'});">
         injoon5
       </div>
     </figcaption>
@@ -82,4 +82,22 @@
      alt="Grapefruit slice atop a pile of other slices">
   </div>
 </div>
+<br>
+<br>
+<h3 class="text-3xl md:pl-20 pt-6 pb-6 font-extrabold flex items-center ">유용한 도구들</h3>
+<h3 class="text-2xl md:pl-20 pt-6 pb-6 font-extrabold flex items-center">암호화 (base64)</h3>
+<div class="rounded-lg overflow-hidden border-solid border border-gray-300 bg-white p-8 md:mx-20 shadow-xl self-center content-center">
+
+<input class="rounded-lg overflow-visible border-solid border flex items-center justify-center mx-auto border-gray-300 bg-white p-3 shadow-xl" id="baseinput" placeholder="마법같이 암호화 됩니다.">
+<br>
+<br>
+<button class="bg-white rounded-lg flex items-center p-2 justify-center mx-auto text-gray-900 text-2xl border-solid border border-gray-300 font-bold flex-grow " onclick="document.getElementById('basetext').innerHTML = 'atob(document.getElementById('baseinput').value)'">암호화 가자!</button>
+<br>
+<div class="rounded-lg border-solid border border-gray-300 bg-white p-8 shadow-xl">
+  <p class="text-2xl pt-6 pb-3 font-semibold" id="basetext">결과:</p>
+</div>
+</div>
+<br>
+<br>
+<br>
 </body>
