@@ -70,16 +70,16 @@
   <div class="h-128 grid grid-rows-2 grid-flow-col gap-3">
     <img class="rounded-lg min-w-full"
      src="https://via.placeholder.com/350"
-     alt="Grapefruit slice atop a pile of other slices">
+     alt="Image">
     <img class="rounded-lg min-w-full"
      src="https://via.placeholder.com/350"
-     alt="Grapefruit slice atop a pile of other slices">
+     alt="Image">
     <img class="rounded-lg min-w-full"
      src="https://via.placeholder.com/350"
-     alt="Grapefruit slice atop a pile of other slices">
+     alt="injoon5천재임">
     <img class="rounded-lg min-w-full"
      src="https://via.placeholder.com/350"
-     alt="Grapefruit slice atop a pile of other slices">
+     alt="이거 보면 ㅋ">
   </div>
 </div>
 <br>
@@ -91,7 +91,13 @@
 <input class="rounded-lg overflow-visible border-solid border flex items-center justify-center mx-auto border-gray-300 bg-white p-3 shadow-xl" id="baseinput" placeholder="마법같이 암호화 됩니다.">
 <br>
 <br>
-<button class="bg-white rounded-lg flex items-center p-2 justify-center mx-auto text-gray-900 text-2xl border-solid border border-gray-300 font-bold flex-grow " onclick="document.getElementById('basetext').innerHTML = 'atob(document.getElementById('baseinput').value)'">암호화 가자!</button>
+<script>
+  function basenc {
+    document.getElementById('basetext').innerHTML = atob(document.getElementById('baseinput').value)
+  }
+  
+</script>
+<button class="bg-white rounded-lg flex items-center p-2 justify-center mx-auto text-gray-900 text-2xl border-solid border border-gray-300 font-bold flex-grow " onclick="basenc()">암호화 가자!</button>
 <br>
 <div class="rounded-lg border-solid border border-gray-300 bg-white p-8 shadow-xl">
   <p class="text-2xl pt-6 pb-3 font-semibold" id="basetext">결과:</p>
