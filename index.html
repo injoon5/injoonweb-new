@@ -118,37 +118,7 @@
 </div>
 
 <br>
-<br>
-<h3 class="text-3xl md:pl-12 mx-2 pt-6 pb-6 font-extrabold flex items-center ">유용한 도구들</h3>
-
-<div class="rounded-lg overflow-hidden border-solid border border-gray-300 bg-white p-8 shadow-xl self-center content-center mx-2 md:mx-16">
-<h3 class="text-2xl pt-1 pb-6 font-extrabold flex items-center">암호화 (base64)</h3>
-<input class="rounded-lg overflow-visible border-solid border flex items-center justify-center mx-auto border-gray-300 bg-white p-3 " id="baseinput" placeholder="일반 텍스트 / 암호 텍스트">
-
-<p class="flex items-center justify-center pt-6 pb-3 font-semibold">* 암호화할 텍스트는 English 만 허용됩니다.</p>
-<br>
-<script>
-  function basenc() {
-    document.getElementById('basetext').innerHTML = window.btoa(document.getElementById('baseinput').value);
-  }
-
-  function basdec() {
-    document.getElementById('basetext').innerHTML = window.atob(document.getElementById('baseinput').value);
-  }
-
-  
-</script>
-<div class="h-12 grid grid-rows-1 grid-flow-col gap-4">
-<button class="bg-white rounded-lg p-2 text-gray-900 text-2xl border-solid border border-gray-300 font-bold hover:bg-gray-50" onclick="basenc()">암호화</button>
-<button class="bg-white rounded-lg p-2 text-gray-900 text-2xl border-solid border border-gray-300 font-bold hover:bg-gray-50" onclick="basdec()">해독</button>
-</div>
-<br>
-<div class="rounded-lg border-solid border border-gray-300 bg-white px-3">
-  <p class="text-2xl pt-2 pb-12 font-semibold break-all" id="basetext">결과:</p>
-</div>
-</div>
-<br>
-<br>  
+<br> 
 <h3 class="text-3xl md:pl-12 pt-6 pb-6 font-extrabold mx-2">현재 재학중인 기관</h3>
 <div class="rounded-xl overflow-hidden border-solid border border-gray-300 bg-white p-8 md:mx-16 shadow-xl mx-2">
 <p class="text-2xl font-bold">2017~ 이화여자대학교 사범대학 부속 초등학교</p>
@@ -191,6 +161,36 @@
 </div>
 <br>
 <br>
+<h3 class="text-3xl md:pl-12 mx-2 pt-6 pb-6 font-extrabold flex items-center ">유용한 도구들</h3>
+
+<div class="rounded-lg overflow-hidden border-solid border border-gray-300 bg-white p-8 shadow-xl self-center content-center mx-2 md:mx-16">
+<h3 class="text-2xl pt-1 pb-6 font-extrabold flex items-center">암호화 (base64)</h3>
+<input class="rounded-lg overflow-visible border-solid border flex items-center justify-center mx-auto border-gray-300 bg-white p-3 " id="baseinput" placeholder="일반 텍스트 / 암호 텍스트">
+
+<p class="flex items-center justify-center pt-6 pb-3 font-semibold">* 암호화할 텍스트는 English 만 허용됩니다.</p>
+<br>
+<script>
+  function basenc() {
+    document.getElementById('basetext').innerHTML = window.btoa(document.getElementById('baseinput').value);
+  }
+
+  function basdec() {
+    document.getElementById('basetext').innerHTML = window.atob(document.getElementById('baseinput').value);
+  }
+
+  
+</script>
+<div class="h-12 grid grid-rows-1 grid-flow-col gap-4">
+<button class="bg-white rounded-lg p-2 text-gray-900 text-2xl border-solid border border-gray-300 font-bold hover:bg-gray-50" onclick="basenc()">암호화</button>
+<button class="bg-white rounded-lg p-2 text-gray-900 text-2xl border-solid border border-gray-300 font-bold hover:bg-gray-50" onclick="basdec()">해독</button>
+</div>
+<br>
+<div class="rounded-lg border-solid border border-gray-300 bg-white px-3">
+  <p class="text-2xl pt-2 pb-12 font-semibold break-all" id="basetext">결과:</p>
+</div>
+</div>
+<br>
+<br> 
 <div class="bg-gradient-to-br from-blue-400 to-blue-500 py-20">
 <p class="text-2xl font bold flex justify-center text-center text-white">Made with ❤️ by injoon5.<br>Copyright 2021. All copyrights reserved. </p>
 </div>
