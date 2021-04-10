@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:title" content="injoon5_WEB" />
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/52849281?s=460&u=64106e70e8adc00414d015772d24e4d0efe200ef&v=4" />
-<meta property="og:description" content="안녕하세요! 👋🏼 저는 🇰🇷에 살고, 개발을 좋아하는 학생, @injoon5 입니다." />
+<meta property="og:description" content="안녕하세요! 👋🏼 저는 🇰🇷에 살고, 컴퓨 좋아하는 학생, @injoon5 입니다." />
 <meta name="Description" content="안녕하세요! 👋🏼 저는 🇰🇷에 살고, 컴퓨터를 좋아하는 학생, @injoon5 입니다.">
 <meta name="theme-color" content="#e5e5e5">
 <meta name="twitter:card" content="summary_large_image">
@@ -32,9 +32,18 @@
 <script>
   console.log("💻 UserAgent 정보.\n   에러가 발생하였을때는 https://github.com/injoon5/injoonweb-new 에 이슈 남겨 주세요. \n   "+navigator.userAgent);
 </script>
+<script>
+  if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+    window.location = 'microsoft-edge:' + window.location;
+    setTimeout(function() {
+      window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
+    }, 1);
+  }
+</script>
 </head>
 <body translate="no">
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "c50fd3b45e16403a8aaba725c2842c8b"}'></script><!-- End Cloudflare Web Analytics -->
+<noscript>이 사이트는 JavaScript가 없으면 폭파하니 꼭 켜주세요!!</noscript>
 <br>
 <br>
 <div class="border-solid border-2 border-black pt-6 rounded-lg md:mx-16 shadow-xl bg-gradient-to-b from-white to-gray-100 mx-2">
