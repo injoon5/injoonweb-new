@@ -13,6 +13,7 @@
     
 <link href="/tailwind.css" rel="stylesheet">
 <script src="/sweetalert.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
 <link rel="preload" href="https://avatars.githubusercontent.com/u/52849281?s=460&u=64106e70e8adc00414d015772d24e4d0efe200ef&v=4" as="image">
 <link rel="preload" href="/placeholder.png" as="image">
 <link rel="preload" href="/tailwind.css" as="style"> 
@@ -30,10 +31,50 @@
         font-family: 'IBMPlexSansKR-Regular';
         cursor: url('/cursor.png'), auto;	
     }
+    #toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    padding: 15px 20px;
+    transform: translate(-50%, 10px);
+    border-radius: 30px;
+    overflow: hidden;
+    font-size: .8rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s, transform .5s;
+    background: rgba(0, 0, 0, .35);
+    color: #fff;
+    z-index: 10000;
+}
+
+#toast.reveal {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0)
+}
 </style>
 <meta charset="UTF-8">
 <script>
   console.log("💻 UserAgent 정보.\n   에러가 발생하였을때는 https://github.com/injoon5/injoonweb-new 에 이슈 남겨 주세요. \n   "+navigator.userAgent);
+    
+  let removeToast;
+
+function toast(string) {
+    const toast = document.getElementById("toast");
+
+    toast.classList.contains("reveal") ?
+        (clearTimeout(removeToast), removeToast = setTimeout(function () {
+            document.getElementById("toast").classList.remove("reveal")
+        }, 1000)) :
+        removeToast = setTimeout(function () {
+            document.getElementById("toast").classList.remove("reveal")
+        }, 1000)
+    toast.classList.add("reveal"),
+        toast.innerText = string
+}  
+
+const clipboard = new ClipboardJS('.btn');
 </script>
 <script>
   if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
@@ -43,10 +84,12 @@
     }, 1);
   }
 </script>
+
 </head>
 <body translate="no">
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "c50fd3b45e16403a8aaba725c2842c8b"}'></script><!-- End Cloudflare Web Analytics -->
 <noscript>이 사이트는 JavaScript가 없으면 폭파하니 꼭 켜주세요!!</noscript>
+<div id="toast"></div>
 <br>
 <br>
 <div class="border-solid border-2 border-black pt-6 rounded-lg md:mx-16 shadow-xl bg-gradient-to-b from-white to-gray-100 mx-2">
@@ -157,7 +200,7 @@
 <div class="rounded-xl overflow-hidden border-solid border border-gray-300 bg-white p-8 md:mx-16 shadow-xl mx-2">
 <a class="text-2xl font-bold underline text-blue-500 flex justify-center" href="https://github.com/injoon5">Github: injoon5</a>
 <br>
-<p class="text-2xl font-bold flex justify-center">Discord: injoon5#0225 (변동 잦음)</p>
+<p class="text-2xl font-bold flex justify-center" data-clipboard-text="injoon5#0225" onclick="toast('복사 되었습니다!'); ">Discord: injoon5#0225 (변동 잦음)</p>
 <br>
 <a class="text-2xl font-bold underline text-blue-500 flex justify-center" href="https://replit.com/@injoon5">Repl.it: injoon5</a>
 <br>
