@@ -47,13 +47,13 @@
     background: rgba(0, 0, 0, .35);
     color: #fff;
     z-index: 10000;
-}
+    }
 
 #toast.reveal {
     opacity: 1;
     visibility: visible;
     transform: translate(-50%, 0)
-}
+    }
 </style>
 <meta charset="UTF-8">
 <script>
@@ -61,7 +61,7 @@
     
   let removeToast;
 
-function toast(string) {
+  function toast(string) {
     const toast = document.getElementById("toast");
 
     toast.classList.contains("reveal") ?
@@ -73,9 +73,9 @@ function toast(string) {
         }, 1000)
     toast.classList.add("reveal"),
         toast.innerText = string
-}  
+    }  
 
-const clipboard = new ClipboardJS('.btn');
+    const clipboard = new ClipboardJS('.text-2xl font-bold flex justify-center');
 </script>
 <script>
   if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
