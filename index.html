@@ -87,9 +87,20 @@
   }
 </script>
 <script>
-function copy(string) {
+function copym() {
   /* Get the text field */
-  var copyText = document.getElementById(string);
+  var copyText = document.getElementById("ntcm");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+}
+function copyd() {
+  /* Get the text field */
+  var copyText = document.getElementById("ntcd");
 
   /* Select the text field */
   copyText.select();
@@ -214,7 +225,7 @@ function copy(string) {
 <div class="rounded-xl overflow-hidden border-solid border border-gray-300 bg-white p-8 md:mx-16 shadow-xl mx-2">
 <a class="text-2xl font-bold underline text-blue-500 flex justify-center" href="https://github.com/injoon5">Github: injoon5</a>
 <br>
-<p class="text-2xl font-bold flex justify-center" id="ntcd" data-clipboard-action="copy" data-clipboard-text="injoon5#0225" onclick="toast('복사 되었습니다!'); copy('ntcd');">Discord: injoon5#0225 (변동 잦음)</p>
+<p class="text-2xl font-bold flex justify-center" id="ntcd" data-clipboard-action="copy" data-clipboard-text="injoon5#0225" onclick="toast('복사 되었습니다!'); copyd();">Discord: injoon5#0225 (변동 잦음)</p>
 <br>
 <a class="text-2xl font-bold underline text-blue-500 flex justify-center" href="https://replit.com/@injoon5">Repl.it: injoon5</a>
 <br>
@@ -226,7 +237,7 @@ function copy(string) {
 <br>
 <a class="text-2xl font-bold underline text-blue-500 flex justify-center" href="https://www.youtube.com/channel/UCjd50YEebeilZc4AxVAB65g">YouTube: injoon5 YouTube</a>
 <br>
-<p class="text-2xl font-bold flex justify-center" id="ntcm" data-clipboard-action="copy" data-clipboard-text="oij0225" onclick="toast('복사 되었습니다!'); copy('ntcm');">Minecraft: oij0225</p>
+<p class="text-2xl font-bold flex justify-center" id="ntcm" data-clipboard-action="copy" data-clipboard-text="oij0225" onclick="toast('복사 되었습니다!'); copym();">Minecraft: oij0225</p>
 </div>
 <br>
 <br>
