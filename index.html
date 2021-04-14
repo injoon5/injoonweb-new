@@ -101,7 +101,7 @@ function copy(val) {
 <div id="toast"></div>
 <br>
 <br>
-<div class="border-solid border-2 border-black pt-6 rounded-lg md:mx-16 shadow-xl bg-gradient-to-b from-white to-gray-100 mx-2">
+<div class="border-solid border-2 border-black pt-6 rounded-lg md:mx-16 shadow-xl bg-gradient-to-b from-white to-gray-100 mx-2" id="intro">
   <img class="space-y-4 w-32 h-32 rounded-full mx-auto flex justify-center transform hover:scale-150 duration-1000 motion-reduce:transform-none" src="https://avatars.githubusercontent.com/u/52849281?s=460&u=64106e70e8adc00414d015772d24e4d0efe200ef&v=4" alt="" width="512" height="512" loading="lazy">
   <div class="pt-3 text-center space-y-4">
     <figcaption class="font-bold text-3xl flex justify-center">
@@ -126,7 +126,7 @@ function copy(val) {
   </div>
 <br>
 <br>  
-<h3 class="text-3xl md:pl-12 pt-6 pb-6 font-extrabold mx-2">사용하는 언어</h3>
+<h3 class="text-3xl md:pl-12 pt-6 pb-6 font-extrabold mx-2" id="lang">사용하는 언어</h3>
 <div class="rounded-xl overflow-hidden border-solid border border-gray-300 bg-white p-8 md:mx-16 shadow-xl mx-2">
   <div class="h-64 grid grid-rows-2 grid-cols-3 grid-flow-col gap-2">
     <button class="bg-gradient-to-br from-green-500 to-green-600  text-white rounded-xl flex items-center justify-center text-xl border-solid border border-gray-300 font-extrabold flex-grow" onclick="document.getElementById('desclang').innerHTML = '<strong>블록코딩</strong><br>저는 블록코딩을 한 5살쯤인가부터 했어요.<br>엔트리, 스크래치, 위즈랩, Makecode 까지! 안해본게 없답니다. <br>저는 블록코딩으로 엄청나게 많은 것을 만들고 지금은 접었답니다~'">블록코딩</button>
@@ -146,7 +146,7 @@ function copy(val) {
   </div>
   <br>
   <br>
-<h3 class="text-3xl md:pl-12 pt-6 pb-6 font-extrabold mx-2">주요 프로젝트</h3>
+<h3 class="text-3xl md:pl-12 pt-6 pb-6 font-extrabold mx-2" id="projects">주요 프로젝트</h3>
 <div class="bg-gradient-to-b from-yellow-500 to-pink-500 text-white font-bold rounded-2xl transition duration-300 ease-in py-2 mx-2 md:mx-16" onclick="alert('저는 보안이 철저하기 때문에 코드가 비밀이에여')">
   <p class='text-2xl font-bold flex align-middle mx-5 my-5'>Ij5-BOT</p>
 
@@ -163,7 +163,7 @@ function copy(val) {
 </div>
 <br>
 <br>
-<h3 class="text-3xl md:pl-12 pt-6 pb-6 font-extrabold mx-2">사진 (추가 예정.)</h3>
+<h3 class="text-3xl md:pl-12 pt-6 pb-6 font-extrabold mx-2" id="photos">사진 (추가 예정.)</h3>
 <div class="rounded-lg overflow-hidden border-solid border border-gray-300 bg-white p-8 shadow-xl mx-2 md:mx-16">
   <div class="h-128 grid grid-rows-2 grid-flow-col gap-3">
     <img class="rounded-lg min-w-full"
@@ -183,20 +183,20 @@ function copy(val) {
 
 <br>
 <br> 
-<h3 class="text-3xl md:pl-12 pt-6 pb-6 font-extrabold mx-2">현재 재학중인 기관</h3>
+<h3 class="text-3xl md:pl-12 pt-6 pb-6 font-extrabold mx-2" id="learningfrom">현재 재학중인 기관</h3>
 <div class="rounded-xl overflow-hidden border-solid border border-gray-300 bg-white p-8 md:mx-16 shadow-xl mx-2">
 <p class="text-2xl font-bold">2017~ 이화여자대학교 사범대학 부속 초등학교</p>
 <p class="text-2xl font-bold">2021~ 한양대학교 소프트웨어 영재원</p>
 </div>
 <br>  
 <br>
-<h3 class="text-3xl md:pl-12 pt-6 pb-6 font-extrabold mx-2">수상한 상</h3>
+<h3 class="text-3xl md:pl-12 pt-6 pb-6 font-extrabold mx-2" id="prizes">수상한 상</h3>
 <div class="rounded-xl overflow-hidden border-solid border border-gray-300 bg-white p-8 md:mx-16 shadow-xl mx-2">
 <p class="text-2xl font-bold">er....</p>
 </div>
 <br>
 <br>
-<h3 class="text-3xl md:pl-12 pt-6 pb-6 font-extrabold mx-2">TMI</h3>
+<h3 class="text-3xl md:pl-12 pt-6 pb-6 font-extrabold mx-2" id="tmi">TMI</h3>
 <div class="rounded-xl overflow-hidden border-solid border border-gray-300 bg-white p-8 md:mx-16 shadow-xl mx-2">
 <p class="text-2xl font-bold">현재 부반장이다.</p>
 <p class="text-2xl font-bold">엔더드래곤을 딱 한번 잡아보았다. </p>
@@ -204,7 +204,7 @@ function copy(val) {
 </div>
 <br>
 <br>
-<h3 class="text-3xl md:pl-12 pt-6 pb-6 font-extrabold mx-2">여러 계정들</h3>
+<h3 class="text-3xl md:pl-12 pt-6 pb-6 font-extrabold mx-2" id="social">여러 계정들</h3>
 
 <div class="rounded-xl overflow-hidden border-solid border border-gray-300 bg-white p-8 md:mx-16 shadow-xl mx-2">
 <a class="text-2xl font-bold underline text-blue-500 flex justify-center" href="https://github.com/injoon5">Github: injoon5</a>
@@ -225,9 +225,9 @@ function copy(val) {
 </div>
 <br>
 <br>
-<h3 class="text-3xl md:pl-12 mx-2 pt-6 pb-6 font-extrabold flex items-center ">유용한 도구들</h3>
+<h3 class="text-3xl md:pl-12 mx-2 pt-6 pb-6 font-extrabold flex items-center" id="usefulutil">유용한 도구들</h3>
 
-<div class="rounded-lg overflow-hidden border-solid border border-gray-300 bg-white p-8 shadow-xl self-center content-center mx-2 md:mx-16">
+<div class="rounded-lg overflow-hidden border-solid border border-gray-300 bg-white p-8 shadow-xl self-center content-center mx-2 md:mx-16" id="base64">
 <h3 class="text-2xl pt-1 pb-6 font-extrabold flex items-center">암호화 (base64)</h3>
 <input class="rounded-lg overflow-visible border-solid border flex items-center justify-center mx-auto border-gray-300 bg-white p-3 " id="baseinput" placeholder="일반 텍스트 / 암호 텍스트">
 
@@ -255,7 +255,7 @@ function copy(val) {
 </div>
 <br>
 <br> 
-<div class="bg-gradient-to-br from-blue-400 to-blue-500 py-20">
+<div class="bg-gradient-to-br from-blue-400 to-blue-500 py-20" id="footer">
 <p class="text-2xl font bold flex justify-center text-center text-white">Made with ❤️ by injoon5.<br>Copyright 2021. All copyrights reserved. </p>
 </div>
 <br>
