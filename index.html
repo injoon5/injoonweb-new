@@ -11,14 +11,13 @@
 <meta name="theme-color" content="#e5e5e5">
 <meta name="twitter:card" content="summary_large_image">
     
-<link href="/tailwind.css" rel="stylesheet">
-<script src="/sweetalert.js"></script>
-<script src="/clipboard.js"></script>
 <link rel="preload" href="https://avatars.githubusercontent.com/u/52849281?s=460&u=64106e70e8adc00414d015772d24e4d0efe200ef&v=4" as="image">
 <link rel="preload" href="/placeholder.png" as="image">
 <link rel="preload" href="/tailwind.css" as="style"> 
 <link rel="preload" href="/sweetalert.js" as="script">
-<link rel="preload" href="/clipboard.js" as="script">
+
+<link href="/tailwind.css" rel="stylesheet">
+<script src="/sweetalert.js"></script>    
     
 <style>
 @font-face {
@@ -74,9 +73,6 @@
     toast.classList.add("reveal"),
         toast.innerText = string
     }  
-    
-    var ntc = document.querySelectorAll('p');
-    const clipboard = new ClipboardJS('#ntcm');
 </script>
 <script>
   if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
