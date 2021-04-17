@@ -230,7 +230,7 @@ function copy(val) {
 
 <div class="rounded-lg overflow-hidden border-solid border border-gray-300 bg-white p-8 shadow-xl self-center content-center mx-2 md:mx-16" id="base64">
 <h3 class="text-2xl pt-1 pb-6 font-extrabold flex items-center">암호화 (base64)</h3>
-<input class="rounded-lg overflow-visible border-solid border flex items-center justify-center mx-auto border-gray-300 bg-white p-3 " id="baseinput" value="Hello World!" placeholder="일반 텍스트 / 암호 텍스트">
+<input class="rounded-lg overflow-visible border-solid border flex items-center justify-center mx-auto border-gray-300 bg-white p-3 " id="baseinput" placeholder="일반 텍스트 / 암호 텍스트">
 
 <p class="flex items-center justify-center pt-6 pb-3 font-semibold">* 암호화할 텍스트는 English 만 허용됩니다.</p>
 <br>
@@ -243,9 +243,6 @@ function copy(val) {
     document.getElementById('basetext').innerHTML = window.atob(document.getElementById('baseinput').value);
   }
 
-  while (true) {
-    basenc()
-  }
   
 </script>
 <div class="h-12 grid grid-rows-1 grid-flow-col gap-4">
@@ -254,7 +251,7 @@ function copy(val) {
 </div>
 <br>
 <div class="rounded-lg border-solid border border-gray-300 bg-white px-3">
-  <p class="text-2xl pt-2 pb-12 font-semibold break-all" id="basetext">결과:</p>
+  <p class="text-2xl pt-2 pb-12 font-semibold break-all" id="basetext">결과: SGVsbG8gV29ybGQh</p>
 </div>
 </div>
 <br>
