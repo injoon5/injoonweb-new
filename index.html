@@ -12,8 +12,10 @@
 <meta name="twitter:card" content="summary_large_image">
     
 <link rel="preload" href="/tailwind.css" as="style"> 
+<link rel="preload" href="/sweetalert.js" as="script">
 
-<link href="/tailwind.css" rel="stylesheet">  
+<link href="/tailwind.css" rel="stylesheet">
+<script src="/sweetalert.js"></script>    
     
 <style>
 @font-face {
@@ -102,7 +104,7 @@ function copy(val) {
 <div id="toast"></div>
 <header class="py-4 bg-yellow-400 text-white text-center font-bold text-lg fixed w-full z-50 bg-opacity-95" id="devstats">
   <p class="absolute flex ml-3 text-gray-700">Update: Tailwind CSS 좋다!!!!</p>
-  <button class="float-right mr-3 justify-self-center" onclick="document.getElementById('devstats').style.visibility = 'hidden';" aria-label="Hide notice">
+  <button class="float-right mr-3 justify-self-center" onclick="document.getElementById('devstats').style.visibility = 'hidden';">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
     </svg>
@@ -174,7 +176,7 @@ function copy(val) {
 
 </div>
 <br>
-<div class="bg-indigo-400 text-white font-bold rounded-2xl transition duration-300 ease-in py-2 mx-2 md:mx-16"  id="proj.tdbot" onclick="alert('저는 보안이 철저하기 때문에 코드가 비밀이에여')">
+<div class="bg-blue-500 text-white font-bold rounded-2xl transition duration-300 ease-in py-2 mx-2 md:mx-16"  id="proj.tdbot" onclick="alert('저는 보안이 철저하기 때문에 코드가 비밀이에여')">
   <p class='text-2xl font-bold flex align-middle mx-5 my-5'>Ij5-ToDo</p>
 
   <h3 class='text-xl font-bold mx-5'>프로젝트 종류: 파이썬 디스코드 봇</h3>
