@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html prefix="og: https://ogp.me/ns#" lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>방명록 - injoon5_WEB</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="방명록 - injoon5_WEB" />
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/52849281?s=460&u=64106e70e8adc00414d015772d24e4d0efe200ef&v=4" />
+<meta property="og:description" content="안녕하세요! 👋🏼 저는 🇰🇷에 살고, 컴퓨터를 좋아하는 학생, injoon5 입니다." />
+<meta name="Description" content="안녕하세요! 👋🏼 저는 🇰🇷에 살고, 컴퓨터를 좋아하는 학생, injoon5 입니다.">
+<meta name="theme-color" content="#e5e5e5">
+<meta name="twitter:card" content="summary_large_image">
+    
+<link rel="preload" href="/tailwind.css" as="style"> 
+<link rel="preload" href="/sweetalert.js" as="script">
+
+<link rel="preload" href="https://utteranc.es/client.js" as="script">
+<link href="/tailwind.css" rel="stylesheet">
+    
+<style>
+@font-face {
+    font-family: 'IBMPlexSansKR-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+    html {
+        scroll-behavior: smooth;
+        }
+    * {
+        font-family: 'IBMPlexSansKR-Regular';
+        -webkit-appearance:none;
+        opacity: 1
+
+    }
+    #toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    padding: 15px 20px;
+    transform: translate(-50%, 10px);
+    border-radius: 30px;
+    overflow: hidden;
+    font-size: .8rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s, transform .5s;
+    background: rgba(0, 0, 0, .35);
+    color: #fff;
+    z-index: 10000;
+    }
+
+#toast.reveal {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0)
+    }
+
+</style>
+<script>
+  console.log("💻 UserAgent 정보.\n   에러가 발생하였을때는 https://github.com/injoon5/injoonweb-new 에 이슈 남겨 주세요. \n   "+navigator.userAgent);
+    
+  let removeToast;
+
+  function toast(string) {
+    const toast = document.getElementById("toast");
+
+    toast.classList.contains("reveal") ?
+        (clearTimeout(removeToast), removeToast = setTimeout(function () {
+            document.getElementById("toast").classList.remove("reveal")
+        }, 1000)) :
+        removeToast = setTimeout(function () {
+            document.getElementById("toast").classList.remove("reveal")
+        }, 1000)
+    toast.classList.add("reveal"),
+        toast.innerText = string
+    }  
+</script>
+<script>
+  if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+    window.location = 'microsoft-edge:' + window.location;
+    setTimeout(function() {
+      window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
+    }, 1);
+  }
+</script>
+<script>
+function copy(val) {
+  const t = document.createElement("textarea");
+  document.body.appendChild(t);
+  t.value = val;
+  t.select();
+  t.setSelectionRange(0, 99999);
+  document.execCommand('copy');
+  document.body.removeChild(t);
+  toast("복사 되었습니다!")
+}
+</script>    
+</head>
+<body translate="no">
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "c50fd3b45e16403a8aaba725c2842c8b"}'></script><!-- End Cloudflare Web Analytics -->
+<noscript>이 사이트는 JavaScript가 없으면 폭파하니 꼭 켜주세요!!</noscript>
+<div id="toast"></div>
+<h3 class="text-3xl md:pl-12 pt-6 font-extrabold mx-2" id="lang">방명록</h3>
+<h3 class="text-lg md:pl-12 pt-2 pb-6 font-extrabold mx-2 text-gray-600" id="lang">남을 비방하거나 홍보를 하는 등의 관리자가 보기에 부적절한 내용이 담길 시, 예고없이 삭제 될 수 있습니다. </h3>
+<div class="rounded-xl overflow-hidden border-solid border border-gray-300 bg-white p-8 md:mx-16 shadow-xl mx-2">
+<script src="https://utteranc.es/client.js"
+        repo="injoon5/injoonweb-new"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+</body>
+</html>
