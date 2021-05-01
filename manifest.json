@@ -30,13 +30,7 @@
             "sizes": "24x24"
         }
     ],
-    "features": [
-        "Cross Platform",
-        "fast",
-        "simple",
-        "Good Design"
-    ],
     "categories": [
         "portfolio"
-    ],
+    ]
 }
