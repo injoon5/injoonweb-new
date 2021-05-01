@@ -122,18 +122,17 @@ function copy(val) {
         'mode': 'no-cors'
     };
     fetch("https://ij5-bot.injoon5.repl.co/api", optObj)
-    .then(response=> {
+        .then(response=> {
         //response.json() turns the response objects body into JSON 
         //response.json() returns a JS promise
         //Use response.text() to turn your response object to text
         return response.json()
     })
-    .then(data=> {
+        .then(data=> {
         //We have successfully made a GET request!
         //Log the data to the console:
         console.log(data);
     })
-    .catch((error) => console.log("error:", error))
 </script>
 </head>
 <body translate="no">
