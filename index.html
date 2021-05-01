@@ -126,7 +126,7 @@ function copy(val) {
         //response.json() turns the response objects body into JSON 
         //response.json() returns a JS promise
         //Use response.text() to turn your response object to text
-        return response.json()
+        console.log(response.text());
     })
         .then(data=> {
         //We have successfully made a GET request!
