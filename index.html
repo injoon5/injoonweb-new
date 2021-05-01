@@ -20,7 +20,7 @@
     
 <link rel="preload" href="/tailwind.css" as="style"> 
 <link href="/tailwind.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     
 <style>
 @font-face {
@@ -114,9 +114,17 @@ function copy(val) {
     }
   </script>
 <script>
-    fetchJsonp('https://ij5-bot.injoon5.repl.co/api')
-    .then(res => res.json())
-    .then(json => console.log(json));
+    const axios = require('axios');
+
+    axios.get('https://ij5-bot.injoon5.repl.co/api')
+    .then(function (response) {
+        // handle success
+        console.log(response);
+    })
+    .catch(function (error) {
+        // handle error
+        console.log(error);
+    });
 </script>
 </head>
 <body translate="no">
