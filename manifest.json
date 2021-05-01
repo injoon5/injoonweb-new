@@ -5,7 +5,7 @@
     "short_name": "injoon5_WEB",
     "scope": "/",
     "display": "standalone",
-    "start_url": "https://oij.vercel.app/",
+    "start_url": "/",
     "background_color": "transparent",
     "theme_color": "#e5e5e5",
     "description": "안녕하세요! 👋🏼 저는 🇰🇷에 살고, 컴퓨터를 좋아하는 학생, injoon5 입니다.",
