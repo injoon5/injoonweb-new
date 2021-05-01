@@ -19,8 +19,8 @@
 <link rel='manifest' href='/manifest.json'>
     
 <link rel="preload" href="/tailwind.css" as="style"> 
-
 <link href="/tailwind.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
     
 <style>
 @font-face {
@@ -114,25 +114,9 @@ function copy(val) {
     }
   </script>
 <script>
-    let optObj = {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        'mode': 'cors'
-    };
-    fetch("https://ij5-bot.injoon5.repl.co/api", optObj)
-        .then(response=> {
-        //response.json() turns the response objects body into JSON 
-        //response.json() returns a JS promise
-        //Use response.text() to turn your response object to text
-        console.log(response.text());
-    })
-        .then(data=> {
-        //We have successfully made a GET request!
-        //Log the data to the console:
-        console.log(data);
-    })
+    fetchJsonp('https://ij5-bot.injoon5.repl.co/api')
+    .then(res => res.json())
+    .then(json => console.log(json));
 </script>
 </head>
 <body translate="no">
