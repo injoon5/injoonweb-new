@@ -119,7 +119,7 @@ function copy(val) {
         headers: {
             'Content-Type': 'application/json'
         },
-        'mode': 'no-cors'
+        'mode': 'cors'
     };
     fetch("https://ij5-bot.injoon5.repl.co/api", optObj)
         .then(response=> {
