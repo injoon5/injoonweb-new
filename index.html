@@ -117,7 +117,7 @@ function copy(val) {
     axios.get('https://ij5-bot.injoon5.repl.co/api/guilds')
     .then(function (response) {
         // handle success
-        const ij5info = JSON.parse(json);
+        const ij5info = JSON.parse(response);
         console.log(ij5info.data);
     })
     .catch(function (error) {
