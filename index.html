@@ -116,7 +116,8 @@ function copy(val) {
 <script>
     axios.get('https://ij5-bot.injoon5.repl.co/api/guilds')
     .then(function (response) {
-        // handle success
+        // handle success\
+        document.getElementById("ij5g").value = "서버 수: " + response["data"]
         console.log(response["data"]);
     })
     .catch(function (error) {
