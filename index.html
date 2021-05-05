@@ -118,7 +118,16 @@ function copy(val) {
     .then(function (response) {
         // handle success\
         document.getElementById("ij5g").innerHTML = "서버 수: " + response["data"] + " <br>"
-        console.log(response["data"]);
+    })
+    .catch(function (error) {
+        // handle error
+        console.log(error);
+    });
+    
+    axios.get('https://discord-todo.injoon5.repl.co/api/guilds')
+    .then(function (response) {
+        // handle success\
+        document.getElementById("todog").innerHTML = "서버 수: " + response["data"] + " <br>"
     })
     .catch(function (error) {
         // handle error
