@@ -305,11 +305,11 @@ function copy(val) {
 <br>
 <script>
   function basenc() {
-    document.getElementById('basetext').innerHTML = window.btoa(document.getElementById('baseinput').value);
+    document.getElementById('basetext').innerHTML = window.btoa(encodeURIComponent(document.getElementById('baseinput').value));
   }
 
   function basdec() {
-    document.getElementById('basetext').innerHTML = window.atob(document.getElementById('baseinput').value);
+    document.getElementById('basetext').innerHTML = decodeURIComponent(window.atob(document.getElementById('baseinput').value));
   }
 
   
