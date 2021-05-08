@@ -21,6 +21,7 @@
 <link rel="preload" href="/tailwind.css" as="style"> 
 <link href="/tailwind.css" rel="stylesheet">
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
     
 <style>
 @font-face {
@@ -101,6 +102,7 @@ function copy(val) {
   document.body.removeChild(t);
   toast("복사 되었습니다!")
 }
+twemoji.parse(document.body);
 </script>    
 <script>
     if ('serviceWorker' in navigator) {
