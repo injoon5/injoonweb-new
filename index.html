@@ -21,6 +21,8 @@
 <link rel="preload" href="/tailwind.css" as="style"> 
 <link href="/tailwind.css" rel="stylesheet">
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- Add the stylesheet to the head -->
+<link rel="stylesheet" type="text/css" href="https://gitcdn.xyz/repo/pi0/clippyjs/master/assets/clippy.css">
     
 <style>
 @font-face {
@@ -338,5 +340,17 @@ function copy(val) {
   </div>
 <br>
 <br>
+
+<script src="https://unpkg.com/jquery@3.2.1"></script>
+
+<script src="https://unpkg.com/clippyjs@latest"></script>
+
+<script type="text/javascript">
+clippy.load('Merlin', function(agent){
+    // Do anything with the loaded agent
+    agent.show();
+    agent.speak('안녕하세요!! 저를 더블클릭 해보세요!!!');
+});
+</script>
 </body>
 </html>
