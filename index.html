@@ -21,6 +21,7 @@
 <link rel="preload" href="/tailwind.css" as="style"> 
 <link href="/tailwind.css" rel="stylesheet">
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
     
 <style>
 @font-face {
@@ -101,6 +102,12 @@ function copy(val) {
   document.body.removeChild(t);
   toast("복사 되었습니다!")
 }
+    
+confetti({
+  particleCount: 100,
+  spread: 70,
+  origin: { y: 0.6 }
+});
 </script>    
 <script>
     if ('serviceWorker' in navigator) {
