@@ -105,10 +105,18 @@ function copy(val) {
   toast("복사 되었습니다!")
 }
     
-confetti({
+var myCanvas = document.createElement('canvas');
+document.appendChild(myCanvas);
+
+var myConfetti = confetti.create(myCanvas, {
+  resize: true,
+  useWorker: true
+});
+myConfetti({
   particleCount: 100,
-  spread: 70,
-  origin: { y: 0.6 }
+  spread: 160
+  // any other options from the global
+  // confetti function
 });
 </script>    
 <script>
