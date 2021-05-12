@@ -67,6 +67,15 @@
 
 </style>
 <script>
+  axios.get('https://ij5-bot.injoon5.repl.co/api/guilds')
+    .then(function (response) {
+        // handle success\
+        console.log("Version_"+response["updated_at"])
+    })
+    .catch(function (error) {
+        // handle error
+        console.log(error);
+    });
   console.log("💻 UserAgent 정보.\n   에러가 발생하였을때는 https://github.com/injoon5/injoonweb-new/issues 에 이슈 남겨 주세요. \n   질문이 있다면 https://github.com/injoon5/injoonweb-new/discussions 에 남겨 주시면 빠르게 답변 해드리겠습니다! \n   "+navigator.userAgent);
     
   let removeToast;
