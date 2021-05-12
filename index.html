@@ -22,7 +22,6 @@
 <link rel="preload" href="/swal.js" as="script"> 
 <link href="/tailwind.css" rel="stylesheet">
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 <script src="/swal.js"></script>
     
 <style>
@@ -67,7 +66,7 @@
 
 </style>
 <script>
-  axios.get('https://ij5-bot.injoon5.repl.co/api/guilds')
+  axios.get('https://api.github.com/repos/injoon5/injoonweb-new')
     .then(function (response) {
         // handle success\
         console.log("Version_"+response["updated_at"])
@@ -121,7 +120,7 @@ function copy(val) {
       console.log('Service worker 등록이 성공했습니다!! scope 는:', registration.scope);
     })
     .catch(function(error) {
-      console.log('Service worker 실패했습니다...., 일어난 :', error);
+      console.log('Service worker 등록이 실패했습니다...., 일어난 :', error);
     });
     }
   </script>
