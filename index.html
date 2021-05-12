@@ -69,8 +69,8 @@
   axios.get('https://api.github.com/repos/injoon5/injoonweb-new')
     .then(function (response) {
         // handle success
-        console.log(response)
-        //console.log("Version_"+response["updated_at"])
+        //console.log(response)
+        console.log("Version_"+response["data"]["updated_at"])
     })
     .catch(function (error) {
         // handle error
