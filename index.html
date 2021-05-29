@@ -138,9 +138,13 @@ function copy(val) {
         if (!bio) throw null;
         if (bio.length >= 60) throw null;
         dbadd(bio)
-        location.reload();
-      });
-    }
+        swal({
+          title: "수정 완료!",
+          text: "수정된 것을 보려면 새로고침 해주세요. ",
+        });
+        
+      })
+      };
 
   </script>
 <script>
