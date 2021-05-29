@@ -124,6 +124,28 @@ function copy(val) {
       console.log('Service worker 등록이 실패했습니다...., 일어난 :', error);
     });
     }
+
+    function updateBio() {
+      swal({
+        text: '수정할 정보를 입력해주세요. ',
+        content: "input",
+        button: {
+          text: "수정!",
+          closeModal: false,
+        },
+      })
+      .then(bio => {
+        if (!bio) throw null;
+        if (bio.length >= 30) throw null;
+        dbadd(bio)
+        swal({
+          title: "수정 완료!"+bio,
+          text: "수정된 것을 보려면 새로고침 해주세요. ",
+        });
+        
+      })
+      };
+
   </script>
 <script>
     axios.get('https://ij5-bot.injoon5.repl.co/api/guilds')
@@ -145,6 +167,28 @@ function copy(val) {
         // handle error
         console.log(error);
     });
+
+    axios.post('https://biostore.injoon5.repl.co/get')
+    .then(function (response) {
+        // handle success\
+        document.getElementById("custombio").innerHTML = response["data"] + " <br>"
+    })
+    .catch(function (error) {
+        // handle error
+        console.log(error);
+    });
+
+    function dbadd(txt) {
+      axios.post('https://biostore.injoon5.repl.co', {
+        bio: txt,
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+}
 </script>
 </head>
 <body translate="no">
@@ -173,6 +217,10 @@ function copy(val) {
     <blockquote>
       <p class="text-3xl font-semibold text-center">
         안녕하세요! 👋🏼<br>저는 🇰🇷에 살고,<br>컴퓨터를 좋아하는 학생,<br><strong>@injoon5</strong> 입니다. 
+      </p>
+      <br>
+      <p class="text-3xl font-semibold text-center" onclick="updateBio();" id="custombio">
+        Fetching...
       </p>
       <br>
       <a href="https://github.com/injoon5" class="text-white bg-gradient-to-r from-green-400 to-blue-500 px-5 py-3 text-center font-extrabold rounded-full w-40 cursor-pointer select-none">GitHub</a>
@@ -336,7 +384,7 @@ function copy(val) {
 <br>
 <br> 
 <div class="bg-gradient-to-br from-blue-400 to-blue-500 py-20" id="footer">
-<a href="/sayhi.html" class="text-2xl font bold flex justify-center text-center text-white hover:text-blue-100">방명록</a>
+<a href="/sayhi" class="text-2xl font bold flex justify-center text-center text-white hover:text-blue-100">방명록</a>
 <br>
 <p class="text-2xl font bold flex justify-center text-center text-white">Made with ❤️ by injoon5.<br>Copyright 2021. All copyrights reserved. </p>
 </div>
