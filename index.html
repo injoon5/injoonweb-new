@@ -140,9 +140,9 @@ function copy(val) {
         dbadd(bio)
         swal({
           title: "수정 완료!",
-          text: "수정된 것을 보려면 새로고침 해주세요. ",
-        });
-        
+          text: "수정된 것을 보려면 버튼을 누르거나 새로고침 해주세요. ",
+        });.then((haha) => {
+            location.reload();});
       })
       };
 
