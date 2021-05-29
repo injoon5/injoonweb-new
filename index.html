@@ -136,7 +136,7 @@ function copy(val) {
       })
       .then(bio => {
         if (!bio) throw null;
-        if (bio.length >= 30) throw null;
+        if (bio.length >= 60) throw null;
         dbadd(bio)
         swal({
           title: "수정 완료!",
