@@ -1,9 +1,7 @@
 {
-  "routes": [
+  "rewrites": [
     { "handle": "filesystem" },
-    { "src": "/(.*)", "status": 404, "dest": "/404.html" },
-  ],
-  "redirects": [
+    { "source": "/(.*)", "status": 404, "destination": "/404.html" },
     { "source": "/coolstuff", "destination": "https://www.youtube.com/watch?v=dQw4w9WgXcQ", "permanent": false },
     { "source": "/vote", "destination": "https://koreanbots.dev/bots/797712776012627988/vote" },
   ],
