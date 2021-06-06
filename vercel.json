@@ -1,7 +1,6 @@
 {
   "rewrites": [
-    { "source": "/coolstuff", "destination": "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
-    { "source": "/vote", "destination": "https://koreanbots.dev/bots/797712776012627988/vote" },
+    { "source": "/sayhi", "destination": "/sayhi.html" }
   ],
   "public": true,
   "cleanUrls": true,
