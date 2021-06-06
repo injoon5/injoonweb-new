@@ -1,7 +1,4 @@
 {
-  "rewrites": [
-    { "source": "/sayhi", "destination": "/sayhi.html" }
-  ],
   "public": true,
   "cleanUrls": true,
   "trailingSlash": false,
