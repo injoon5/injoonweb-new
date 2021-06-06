@@ -2,14 +2,8 @@
   "routes": [
     { "handle": "filesystem" },
     { "src": "/(.*)", "status": 404, "dest": "/404.html" }
-  ]
-},
-{
-  "public": true
-},
-{
-  "cleanUrls": true
-},
-{
+  ],
+  "public": true,
+  "cleanUrls": true,
   "trailingSlash": false
-}
+},
