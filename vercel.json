@@ -1,6 +1,8 @@
 {
   "routes": [
     { "handle": "filesystem" },
-    { "src": "/(.*)", "status": 404, "dest": "/404.html" }
+    { "src": "/(.*)", "status": 404, "dest": "/404.html" }, 
+    { "src": "/sayhi", "status": 301, "dest": "/sayhi.html" }, 
+    { "src": "/vote", "status": 308, "dest": "https://koreanbots.dev/bots/797712776012627988" }
   ]
 }
