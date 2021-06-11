@@ -3,12 +3,5 @@
     { "handle": "filesystem" },
     { "src": "/(.*)", "status": 404, "dest": "/404.html" }, 
     { "src": "/vote", "status": 308, "dest": "https://koreanbots.dev/bots/797712776012627988" }
-  ], 
-  "redirects": [
-    { 
-      "source": "/sayhi",
-      "destination": "/sayhi.html", 
-      "permanent": true
-    }
   ]
 }
