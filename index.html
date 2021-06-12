@@ -23,6 +23,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
+<meta name="theme-color" content="#fbbf24">
+
 <link rel='manifest' href='/manifest.json'>
     
 <link rel="preload" href="/tailwind.css" as="style"> 
@@ -132,7 +134,10 @@ function copy(val) {
       console.log('Service worker 등록이 실패했습니다...., 일어난 :', error);
     });
     }
-
+    function closeNotice() {
+        document.getElementById('devstats').style.visibility = 'hidden';
+        document.querySelector('meta[property="theme-color"]').setAttribute("content", "#e5e7eb");
+    }
     function updateBio() {
       swal({
         text: '수정할 정보를 입력해주세요. ',
@@ -205,7 +210,7 @@ function copy(val) {
 <div id="toast"></div>
 <header class="py-4 bg-yellow-400 text-white text-center font-bold text-lg fixed w-full z-50 bg-opacity-95" id="devstats">
   <p class="absolute flex ml-3 text-gray-700 select-none">Update: Hel...lo?</p>
-  <button class="float-right mr-3 justify-self-center" onclick="document.getElementById('devstats').style.visibility = 'hidden';" aria-label="Close notice">
+  <button class="float-right mr-3 justify-self-center" onclick="closeNotice()" aria-label="Close notice">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
     </svg>
