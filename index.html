@@ -134,11 +134,6 @@ function copy(val) {
       console.log('Service worker 등록이 실패했습니다...., 일어난 :', error);
     });
     }
-    function closeNotice() {
-        document.getElementById('devstats').style.visibility = 'hidden';
-        document.getElementsByTagName('meta')["theme-color"].content = "#e5e7eb";
-        //document.querySelector('meta[property="theme-color"]').setAttribute("content", "#e5e7eb");
-    }
     function updateBio() {
       swal({
         text: '수정할 정보를 입력해주세요. ',
@@ -209,14 +204,11 @@ function copy(val) {
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "c50fd3b45e16403a8aaba725c2842c8b"}'></script><!-- End Cloudflare Web Analytics -->
 <noscript>이 사이트는 JavaScript가 없으면 폭파하니 꼭 켜주세요!!</noscript>
 <div id="toast"></div>
-<header class="py-4 bg-yellow-400 text-white text-center font-bold text-lg fixed w-full z-50 bg-opacity-95 my-4 mx-4 mr-4 rounded-md" id="devstats">
-  <p class="absolute flex ml-3 text-gray-700 select-none">Update: Hel...lo?</p>
-  <button class="float-right mr-3 justify-self-center" onclick="closeNotice()" aria-label="Close notice">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-    </svg>
-  </button>
+<div class="flex items-center justify-center h-20">
+<header class="py-3 bg-yellow-400 text-white font-bold text-lg fixed z-50 bg-opacity-95 my-2 w-11/12 self-center rounded-md">
+  <p class="mx-10 text-gray-700 select-none truncate">𝕀 𝕒𝕞 𝕔𝕠𝕠𝕝!!</p>
 </header>
+</div>
 <br>
 <br>
 <br>
