@@ -136,7 +136,8 @@ function copy(val) {
     }
     function closeNotice() {
         document.getElementById('devstats').style.visibility = 'hidden';
-        document.querySelector('meta[property="theme-color"]').setAttribute("content", "#e5e7eb");
+        document.getElementsByTagName('meta')["theme-color"].content = "#e5e7eb";
+        //document.querySelector('meta[property="theme-color"]').setAttribute("content", "#e5e7eb");
     }
     function updateBio() {
       swal({
