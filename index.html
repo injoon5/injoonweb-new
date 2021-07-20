@@ -30,11 +30,42 @@
 <link rel="preload" href="/tailwind.css" as="style"> 
 <link rel="preload" href="/swal.js" as="script"> 
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" as="script"> 
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js" as="script"> 
 <link href="/tailwind.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="/swal.js"></script>
-    
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+  const options = {
+    bottom: '32px', // default: '32px'
+    right: '32px', // default: '32px'
+    left: 'unset', // default: 'unset'
+    time: '0.0s', // default: '0.3s'
+    mixColor: '#fff', // default: '#fff'
+    backgroundColor: '#f6f8fa',  // default: '#fff'
+    buttonColorDark: '#000',  // default: '#100f2c'
+    buttonColorLight: '#f6f8fa', // default: '#fff'
+    saveInCookies: false, // default: true,
+    label: '🌞 🌕', // default: ''
+    autoMatchOsTheme: true // default: true
+  }
+
+  function addDarkmodeWidget() {
+    new Darkmode(options).showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+
+
+</script>
+
+
 <style>
+.darkmode-toggle {
+  z-index: 500;
+}
+
+
+
 @font-face {
     font-family: 'IBMPlexSansKR-Regular';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
@@ -69,10 +100,16 @@
     }
 
 #toast.reveal {
+    animation: blink 1s;
+    animation-iteration-count: 1;
     opacity: 1;
+    border: solid;
+    border-color: #fff;
     visibility: visible;
     transform: translate(-50%, 0)
-    }
+  }
+
+@keyframes blink { 50% { border-color:#fff ; }  }
 
 </style>
 <script>
@@ -205,9 +242,11 @@ function copy(val) {
 <noscript>이 사이트는 JavaScript가 없으면 폭파하니 꼭 켜주세요!!</noscript>
 <div id="toast"></div>
 <div class="flex items-center justify-center h-20">
+
 <header class="py-3 bg-yellow-400 text-white font-bold text-lg fixed z-50 bg-opacity-95 mb-2 mt-1 w-11/12 self-center rounded-md">
-  <p class="mx-10 text-gray-700 select-none truncate">𝕀 𝕒𝕞 𝕔𝕠𝕠𝕝!!</p>
+  <p class="mx-10 text-gray-700 select-none truncate">다크모드 적용 완료! 이젠 눈뽕이 없다!</p>
 </header>
+
 </div>
 
 <div class="border-solid border-2 border-black pt-6 rounded-lg md:mx-16 shadow-xl bg-gradient-to-b from-white to-gray-100 mx-2 pb-3" id="intro">
@@ -220,15 +259,15 @@ function copy(val) {
     </div>
     <blockquote>
       <p class="text-3xl font-semibold text-center">
-        안녕하세요! 👋🏼<br>저는 🇰🇷에 살고,<br>컴퓨터를 좋아하는 학생,<br><strong>injoon5</strong> 입니다. 
+        안녕하세요!<br>컴퓨터를 좋아하는 학생,<br><strong>injoon5</strong> 입니다. 
       </p>
       <br>
       <code class="text-3xl font-semibold text-center" onclick="updateBio();" id="custombio" onmouseover="toast('클릭해서 Bio를 바꿔보세요!')">
         Fetching...
       </code>
       <br>
-      <a href="https://github.com/injoon5" class="text-white bg-gradient-to-r from-green-400 to-blue-500 px-5 py-3 text-center font-extrabold rounded-full w-40 cursor-pointer select-none">GitHub</a>
-      <a href="https://repl.it/@injoon5" class="text-white bg-gradient-to-r from-green-400 to-blue-500 px-5 py-3 text-center font-extrabold rounded-full w-40 cursor-pointer select-none">Repl.it</a>
+      <a href="https://github.com/injoon5" style="isolation: isolate;" class="text-white bg-gradient-to-r from-green-400 to-blue-500 px-5 py-3 text-center font-extrabold rounded-full w-40 cursor-pointer select-none">GitHub</a>
+      <a href="https://repl.it/@injoon5" style="isolation: isolate;" class="text-white bg-gradient-to-r from-green-400 to-blue-500 px-5 py-3 text-center font-extrabold rounded-full w-40 cursor-pointer select-none">Repl.it</a>
     </blockquote>
     
       <div class="flex justify-center pt-6 pb-3" onclick="window.location.href='#lang'">
@@ -245,12 +284,12 @@ function copy(val) {
 <h3 class="text-3xl md:pl-12 pt-6 pb-6 font-extrabold mx-2" id="lang">사용하는 언어</h3>
 <div class="rounded-xl overflow-hidden border-solid border border-gray-300 bg-white p-8 md:mx-16 shadow-xl mx-2">
   <div class="h-64 grid grid-rows-2 grid-cols-3 grid-flow-col gap-2">
-    <button class="bg-gradient-to-br from-green-500 to-green-600  text-white rounded-xl flex items-center justify-center text-xl border-solid border border-gray-300 font-extrabold flex-grow select-none" onclick="document.getElementById('desclang').innerHTML = '<strong>블록코딩</strong><br>저는 블록코딩을 한 5살쯤인가부터 했어요.<br>엔트리, 스크래치, 위즈랩, Makecode 까지! 안해본게 없답니다. <br>저는 블록코딩으로 엄청나게 많은 것을 만들고 지금은 접었답니다~'">블록코딩</button>
-    <button class="bg-gradient-to-b from-blue-500 to-yellow-400  text-white rounded-xl flex items-center justify-center text-xl border-solid border border-gray-300 font-extrabold flex-grow select-none" onclick="document.getElementById('desclang').innerHTML = '<strong>파이썬</strong><br>저는 학원에서 처음으로 파이썬을 접해봤어요. <br>그때는 단순히 문자열 슬라이싱이나 인풋 같은 기본적인것만 했었죠. <br>그런데 지금은 디코봇도 만들고, 이미지도 수정하고... 암튼 많이 해요.<br><del>파이썬은 사랑입니다</del>'">파이썬</button>
-    <button class="bg-gradient-to-br from-yellow-400 to-yellow-600  text-white rounded-xl flex items-center justify-center text-xl border-solid border border-gray-300 font-extrabold flex-grow select-none" onclick="document.getElementById('desclang').innerHTML = '<strong>HTML</strong><br>저는 2020년 초반, 그러니까 코로나가 유행하던 4학년,<br>원격수업을 하던 평일에 <strong>수업 끝나고</strong> 할게 없어서 웹서핑을 하다 웹사이트를 만들고 싶어서 무료 도메인을 보다 HTML 입력창이 있어 이게 뭔가 하고 찾아본것이 제가 HTML을 하게 된 계기였어요. '">HTML</button>
-    <button class="bg-gradient-to-br from-yellow-300 to-yellow-500  text-white rounded-xl flex items-center justify-center text-xl border-solid border border-gray-300 font-extrabold flex-grow select-none" onclick="document.getElementById('desclang').innerHTML = '<strong>JavaScript</strong><br>웹개발을 하다 자스라는 신세계를 접하게 되고 열심히 하다 요즘에는 거희 접었어요...'">JS</button>
-    <button class="bg-gradient-to-br from-blue-400 to-blue-600  text-white rounded-xl flex items-center justify-center text-xl border-solid border border-gray-300 font-extrabold flex-grow select-none" onclick="document.getElementById('desclang').innerHTML = '<strong>CSS</strong><br><del>CSS 없이 웹개발을 하는 매우 신비한 짓을 하다</del> CSS를 발견했어요. <br>기차나서 안쓰다가 Bootstrap을 보고 그걸로 열심히 웹을 만들었죠. <br>그러다 그 디자인에 질려서 Tailwind CSS로 넘어왔어요. '">CSS</button>
-    <button class="bg-gradient-to-br from-blue-600 to-blue-800  text-white rounded-xl flex items-center justify-center text-xl border-solid border border-gray-300 font-extrabold flex-grow select-none" onclick="document.getElementById('desclang').innerHTML = '<strong>C</strong><br><del>으악ㄱ!! 리스트 길이를 지정해야 하낟니!!!!!</del> <br>어.. 네 아직은 필요성을 못느끼는 언어입니다. 이걸로 게임 만들면 보여 드릴게요!  '">C</button>
+    <button class="bg-gradient-to-br from-green-500 to-green-600 darkmode-ignore text-white rounded-xl flex items-center justify-center text-xl border-solid border border-gray-300 font-extrabold flex-grow select-none" onclick="document.getElementById('desclang').innerHTML = '<strong>블록코딩</strong><br>저는 블록코딩을 한 5살쯤인가부터 했어요.<br>엔트리, 스크래치, 위즈랩, Makecode 까지! 안해본게 없답니다. <br>저는 블록코딩으로 엄청나게 많은 것을 만들고 지금은 접었답니다~'">블록코딩</button>
+    <button class="bg-gradient-to-b from-blue-500 to-yellow-400 darkmode-ignore text-white rounded-xl flex items-center justify-center text-xl border-solid border border-gray-300 font-extrabold flex-grow select-none" onclick="document.getElementById('desclang').innerHTML = '<strong>파이썬</strong><br>저는 학원에서 처음으로 파이썬을 접해봤어요. <br>그때는 단순히 문자열 슬라이싱이나 인풋 같은 기본적인것만 했었죠. <br>그런데 지금은 디코봇도 만들고, 이미지도 수정하고... 암튼 많이 해요.<br><del>파이썬은 사랑입니다</del>'">파이썬</button>
+    <button class="bg-gradient-to-br from-yellow-400 to-yellow-600 darkmode-ignore text-white rounded-xl flex items-center justify-center text-xl border-solid border border-gray-300 font-extrabold flex-grow select-none" onclick="document.getElementById('desclang').innerHTML = '<strong>HTML</strong><br>저는 2020년 초반, 그러니까 코로나가 유행하던 4학년,<br>원격수업을 하던 평일에 <strong>수업 끝나고</strong> 할게 없어서 웹서핑을 하다 웹사이트를 만들고 싶어서 무료 도메인을 보다 HTML 입력창이 있어 이게 뭔가 하고 찾아본것이 제가 HTML을 하게 된 계기였어요. '">HTML</button>
+    <button class="bg-gradient-to-br from-yellow-300 to-yellow-500 darkmode-ignore text-white rounded-xl flex items-center justify-center text-xl border-solid border border-gray-300 font-extrabold flex-grow select-none" onclick="document.getElementById('desclang').innerHTML = '<strong>JavaScript</strong><br>웹개발을 하다 자스라는 신세계를 접하게 되고 열심히 하다 요즘에는 거희 접었어요...'">JS</button>
+    <button class="bg-gradient-to-br from-blue-400 to-blue-600 darkmode-ignore text-white rounded-xl flex items-center justify-center text-xl border-solid border border-gray-300 font-extrabold flex-grow select-none" onclick="document.getElementById('desclang').innerHTML = '<strong>CSS</strong><br><del>CSS 없이 웹개발을 하는 매우 신비한 짓을 하다</del> CSS를 발견했어요. <br>기차나서 안쓰다가 Bootstrap을 보고 그걸로 열심히 웹을 만들었죠. <br>그러다 그 디자인에 질려서 Tailwind CSS로 넘어왔어요. '">CSS</button>
+    <button class="bg-gradient-to-br from-blue-600 to-blue-800 darkmode-ignore text-white rounded-xl flex items-center justify-center text-xl border-solid border border-gray-300 font-extrabold flex-grow select-none" onclick="document.getElementById('desclang').innerHTML = '<strong>C</strong><br><del>으악ㄱ!! 리스트 길이를 지정해야 하낟니!!!!!</del> <br>어.. 네 아직은 필요성을 못느끼는 언어입니다. 이걸로 게임 만들면 보여 드릴게요!  '">C</button>
   </div>
 </div>
 <br>
@@ -262,7 +301,7 @@ function copy(val) {
   <br>
   <br>
 <h3 class="text-3xl md:pl-12 pt-6 pb-6 font-extrabold mx-2" id="proj">주요 프로젝트</h3>
-<div class="bg-gradient-to-b from-yellow-500 to-pink-500 text-white font-bold rounded-2xl transition duration-300 ease-in py-2 mx-2 md:mx-16"  id="proj.bot" onclick="alert('저는 보안이 철저하기 때문에 코드가 비밀이에여')">
+<div class="bg-gradient-to-b from-yellow-500 to-pink-500 text-white font-bold rounded-2xl transition duration-300 ease-in py-2 mx-2 md:mx-16" style="isolation: isolate;" id="proj.bot" onclick="alert('저는 보안이 철저하기 때문에 코드가 비밀이에여')">
   <p class='text-2xl font-bold flex align-middle mx-5 my-5'>Ij5-BOT</p>
 
   <h3 class='text-xl font-bold mx-5'>프로젝트 종류: 파이썬 디스코드 봇</h3>
@@ -278,7 +317,7 @@ function copy(val) {
 
 </div>
 <br>
-<div class="bg-gradient-to-b from-indigo-400 to-blue-500 bg-blue-500 text-white font-bold rounded-2xl transition duration-300 ease-in py-2 mx-2 md:mx-16"  id="proj.tdbot" onclick="alert('저는 보안이 철저하기 때문에 코드가 비밀이에여')">
+<div class="bg-gradient-to-b from-indigo-400 to-blue-500 bg-blue-500 text-white font-bold rounded-2xl transition duration-300 ease-in py-2 mx-2 md:mx-16" style="isolation: isolate;"  id="proj.tdbot" onclick="alert('저는 보안이 철저하기 때문에 코드가 비밀이에여')">
   <p class='text-2xl font-bold flex align-middle mx-5 my-5'>Ij5-ToDo</p>
 
   <h3 class='text-xl font-bold mx-5'>프로젝트 종류: 파이썬 디스코드 봇</h3>
@@ -339,19 +378,19 @@ function copy(val) {
 <h3 class="text-3xl md:pl-12 pt-6 pb-6 font-extrabold mx-2" id="social">여러 계정들</h3>
 
 <div class="rounded-xl overflow-hidden border-solid border border-gray-300 bg-white p-8 md:mx-16 shadow-xl mx-2">
-<a class="text-2xl font-bold underline text-blue-500 flex justify-center" href="https://github.com/injoon5">Github: injoon5</a>
+<a style="isolation: isolate;" class="text-2xl font-bold underline text-blue-500 flex justify-center" href="https://github.com/injoon5">Github: injoon5</a>
 <br>
 <p class="text-2xl font-bold flex justify-center" onclick="copy('injoon5#2402');">Discord: injoon5#0225 (변동 잦음)</p>
 <br>
-<a class="text-2xl font-bold underline text-blue-500 flex justify-center" href="https://replit.com/@injoon5">Repl.it: injoon5</a>
+<a style="isolation: isolate;" class="text-2xl font-bold underline text-blue-500 flex justify-center" href="https://replit.com/@injoon5">Repl.it: injoon5</a>
 <br>
-<a class="text-2xl font-bold underline text-blue-500 flex justify-center" href="https://www.reddit.com/user/injoon5">Reddit: injoon5</a>
+<a style="isolation: isolate;" class="text-2xl font-bold underline text-blue-500 flex justify-center" href="https://www.reddit.com/user/injoon5">Reddit: injoon5</a>
 <br>
-<a class="text-2xl font-bold underline text-blue-500 flex justify-center" href="https://open.spotify.com/user/dzoy6btg9z2czc2lgspu1n3mm">Spotify: injoon5</a>
+<a style="isolation: isolate;" class="text-2xl font-bold underline text-blue-500 flex justify-center" href="https://open.spotify.com/user/dzoy6btg9z2czc2lgspu1n3mm">Spotify: injoon5</a>
 <br>
-<a class="text-2xl font-bold underline text-blue-500 flex justify-center" href="https://www.twitch.tv/injoon5">Twitch: injoon5</a>
+<a style="isolation: isolate;" class="text-2xl font-bold underline text-blue-500 flex justify-center" href="https://www.twitch.tv/injoon5">Twitch: injoon5</a>
 <br>
-<a class="text-2xl font-bold underline text-blue-500 flex justify-center" href="https://www.youtube.com/channel/UCjd50YEebeilZc4AxVAB65g">YouTube: injoon5 YouTube</a>
+<a style="isolation: isolate;" class="text-2xl font-bold underline text-blue-500 flex justify-center" href="https://www.youtube.com/channel/UCjd50YEebeilZc4AxVAB65g">YouTube: injoon5 YouTube</a>
 <br>
 <p class="text-2xl font-bold flex justify-center" onclick="copy('oij0225');">Minecraft: oij0225</p>
 <br>
@@ -387,7 +426,7 @@ function copy(val) {
 </div>
 <br>
 <br> 
-<div class="bg-gradient-to-br from-blue-400 to-blue-500 py-20" id="footer">
+<div style="isolation: isolate;" class="bg-gradient-to-br from-blue-400 to-blue-500 py-20" id="footer">
 <a href="/sayhi" class="text-2xl font bold flex justify-center text-center text-white hover:text-blue-100">방명록</a>
 <br>
 <p class="text-2xl font bold flex justify-center text-center text-white">Made with ❤️ by injoon5.<br>Copyright 2021. All copyrights reserved. </p>
