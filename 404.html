@@ -2,10 +2,37 @@
  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
   <meta name="kcsc" content="blocking" />
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js" as="script"> 
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+  const options = {
+    bottom: '32px', // default: '32px'
+    right: '32px', // default: '32px'
+    left: 'unset', // default: 'unset'
+    time: '0.0s', // default: '0.3s'
+    mixColor: '#fff', // default: '#fff'
+    backgroundColor: '#f6f8fa',  // default: '#fff'
+    buttonColorDark: '#000',  // default: '#100f2c'
+    buttonColorLight: '#f6f8fa', // default: '#fff'
+    saveInCookies: false, // default: true,
+    label: '🌞 🌕', // default: ''
+    autoMatchOsTheme: true // default: true
+  }
+
+  function addDarkmodeWidget() {
+    new Darkmode(options).showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+
+
+  </script>
   <title>존재하지 않는 사이트에 대한 차단 안내</title>
   <meta name="theme-color" content="#0e2361">
   <meta name="viewport" content='viewport-fit=cover'>
   <style type="text/css">
+  .darkmode-toggle {
+    z-index: 500;
+  } 
 	body { margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; font-family: "돋움"; }
 	.h1 { font-family: "Arial"; font-size: 60px; font-weight: bold; color: #D2DEF4; text-align: center; letter-spacing:1px; }
 	.h2 { font-size: 25px; font-weight: bold; color: #FF640A; text-align: center; letter-spacing:-2px; }
@@ -20,6 +47,7 @@
 		background: -webkit-linear-gradient(top, #0b205e 0%,#3075b9 100%); /* Chrome10-25,Safari5.1-6 */
 		background: linear-gradient(to bottom, #0b205e 0%,#3075b9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b205e', endColorstr='#3075b9',GradientType=0 ); /* IE6-9 */
+    isolation: isolate;
 	}
 	.tb2 {
 		background: #3489d1; /* Old browsers */
@@ -27,6 +55,7 @@
 		background: -webkit-linear-gradient(top, #3489d1 1%,#3da2d7 100%); /* Chrome10-25,Safari5.1-6 */
 		background: linear-gradient(to bottom, #3489d1 1%,#3da2d7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3489d1', endColorstr='#3da2d7',GradientType=0 ); /* IE6-9 */
+    isolation: isolate;
 	}
   </style>
   <script language="JavaScript">
