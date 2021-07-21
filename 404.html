@@ -5,8 +5,11 @@
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js" as="script"> 
 <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 <script>
-  function getUserInfo() {
-    birth = prompt("주민등록번호 압자리를 입력해 주세요.  ")
+  function saGi() {
+    prompt("주민등록번호 앞자리를 입력해 주세요. ")
+    setTimeout(function(){
+       alert("77ㅓ억~! 잘 먹겠습니다~~");
+   }, Math.floor(Math.random() * 4000));
   }
   const options = {
     bottom: '32px', // default: '32px'
@@ -108,7 +111,7 @@
 	  <td align="center" style="font-size: 14px; font-weight: bold;">※ 404 페이지를 도용한 사이트(warning.or.kr)가 발견되어 각별한 주의가 필요합니다.</td>
      </tr>
 	 <tr>
-	  <td align="center" style="font-size: 14px; font-weight: bold; color: #FF640A;">(404페이지는 개인정보를 요구하고, 프로그램 설치를 유도합니다.)</td>
+	  <td onclick="saGi()" align="center" style="font-size: 14px; font-weight: bold; color: #FF640A;">(404페이지는 개인정보를 요구하고, 프로그램 설치를 유도합니다.)</td>
      </tr>
 	 <tr>
 	  <td height="25">&nbsp;</td>
