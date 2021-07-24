@@ -162,6 +162,19 @@ function copy(val) {
 }
 </script>    
 <script>
+    function noticeDetail {
+        const notice_bar = document.getElementById('notice').innerHTML;
+        
+        swal({
+          text: '공지 자세히 보기',
+          content: notice_bar,
+          button: {
+            text: "닫기",
+            closeModal: true,
+          },
+        })
+    }
+    
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/service-worker.js')
       .then(function(registration) {
@@ -255,7 +268,7 @@ function copy(val) {
 <div class="flex items-center justify-center h-20">
 
 <header class="py-3 bg-yellow-400 text-white font-bold text-lg fixed z-50 bg-opacity-95 mb-2 mt-1 w-11/12 self-center rounded-md">
-  <p class="mx-10 text-gray-700 select-none truncate">다크모드 적용 완료! / 사진 추가요~</p>
+  <p id = "notice" class="mx-10 text-gray-700 select-none truncate">다크모드 적용 완료! / 사진 추가요~</p>
 </header>
 
 </div>
