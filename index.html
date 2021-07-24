@@ -165,14 +165,7 @@ function copy(val) {
     function noticeDetail() {
         const notice_bar = document.getElementById('notice').innerHTML;
         
-        swal({
-          text: '공지 자세히 보기',
-          content: notice_bar,
-          button: {
-            text: "닫기",
-            closeModal: true,
-          },
-        })
+        swal('공지 자세히 보기', notice_bar)
     }
     
     if ('serviceWorker' in navigator) {
